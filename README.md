@@ -35,7 +35,7 @@ $ gbook help
 
 #### 指定特定版本
 
-默认情况下，GBook CLI将从书籍配置中读取要使用的gbook版本，但是您可以使用以下 `--gbook` 选项强制使用特定版本：
+默认情况下，GBook CLI将从书籍配置(book.json)中读取要使用的gbook版本，但是您可以使用以下 `--gbook` 选项强制使用特定版本：
 
 ```
 $ gbook build ./mybook --gbook=2.0.1
