@@ -48,11 +48,11 @@ program
     .option('-v, --gbook [version]', '指定要使用的gbook版本')
     .option('-d, --debug', '启用debug模式，将输出详细错误')
     .option('-V, --version', '显示gbook和gbook-cli的运行版本', function() {
-        console.log('CLI version:', pkg.version);
+        console.log(color.green('CLI version: ' + pkg.version))
         runPromise(
             manager.ensure(bookRoot, program.gbook)
             .then(function(v) {
-                console.log('gbook version:', printgbookVersion(v));
+                console.log(color.green('gbook version: ' + printgbookVersion(v)))
                 process.exit(0);
             })
         );
