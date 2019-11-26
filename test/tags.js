@@ -1,19 +1,19 @@
 var should = require('should');
 var tags = require('../lib/tags');
 
-describe('Tags', function() {
+describe('tags.js', function() {
     describe('.isValid()', function() {
-        it('should return true for version >= 2.0.0', function() {
+        it('对于 version >= 2.0.0 应该返回true', function() {
             tags.isValid('2.0.0').should.be.ok()
         });
 
-        it('should return true for pre-releases', function() {
+        it('对于 pre-releases 应该返回true', function() {
             tags.isValid('2.0.0-beta.0').should.be.ok()
         });
     });
 
     describe('.satisfies()', function() {
-        it('should return true for tag and *', function() {
+        it('对于 tag 和 * 应该返回true', function() {
             tags.satisfies('pre', '*').should.be.ok()
         });
     });
